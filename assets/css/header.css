@@ -1,5 +1,5 @@
 header {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -34,4 +34,11 @@ header nav ul li a {
 
 header .btn {
   border-style: solid !important;
+}
+
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+  }
 }
