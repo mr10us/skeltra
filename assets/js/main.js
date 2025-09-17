@@ -1,9 +1,13 @@
 window.addEventListener("DOMContentLoaded", init);
 
+const HEADER = document.querySelector("header");
+
 async function init() {
   try {
     await ensureSwiper();
     initialiseSliders();
+
+    handleHeaderScroll(HEADER);
   } catch (e) {
     console.error("Swiper load failed:", e);
   } finally {
@@ -196,16 +200,13 @@ function initialiseSliders() {
     });
   }
 
-  
-  const reviewsSwiperEl = document.querySelector(
-    ".reviews .reviews-swiper"
-  );
+  const reviewsSwiperEl = document.querySelector(".reviews .reviews-swiper");
 
   if (reviewsSwiperEl) {
     const reviewsSwiper = new Swiper(reviewsSwiperEl, {
       slidesPerView: 1,
       spaceBetween: 16,
-      loop: true,
+
       navigation: {
         nextEl: ".reviews-swiper-container .swiper-button-next",
         prevEl: ".reviews-swiper-container .swiper-button-prev",
@@ -226,4 +227,49 @@ function initialiseSliders() {
       },
     });
   }
+}
+
+function handleHeaderScroll(header) {
+  if (!header) return;
+
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  }
+
+  window.addEventListener(
+    "scroll",
+    _throttle(() => {
+      addHeaderScrolled(header);
+    }, 1000)
+  );
+}
+
+function addHeaderScrolled(header) {
+  if (!header) return;
+  
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
+
+function _throttle(fn, limit) {
+  let inThrottle = false,
+    lastArgs = null,
+    lastThis = null;
+  return function (...args) {
+    lastArgs = args;
+    lastThis = this;
+    if (!inThrottle) {
+      fn.apply(lastThis, lastArgs);
+      inThrottle = true;
+      setTimeout(() => {
+        inThrottle = false;
+        // в конце окна — если приходили вызовы, выполним последний
+        if (lastArgs) fn.apply(lastThis, lastArgs);
+        lastArgs = lastThis = null;
+      }, limit);
+    }
+  };
 }

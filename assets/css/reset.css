@@ -46,6 +46,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Fixel Display", sans-serif;
   font-optical-sizing: auto;
@@ -104,7 +108,7 @@ ul {
   --color-accent: #6e7350;
 
   --section-padding: clamp(2.5rem, 1.8421rem + 2.6316vw, 4.5rem);
-  --header-height: 106px;
+  --header-height: 120px;
 
   --text-sm: clamp(0.875rem, 0.7949rem + 0.2564vw, 1rem); /* 14-16 px */
   --text-md: clamp(1rem, 0.9199rem + 0.2564vw, 1.125rem); /* 16-18 px */
@@ -122,6 +126,7 @@ ul {
   --dur-short: 320ms;
   --dur: 420ms;
   --dur-long: 520ms;
+  --delay: 0s;
 }
 
 .container {
@@ -169,6 +174,7 @@ ul {
 
 section {
   padding-block: var(--section-padding, 100px);
+  scroll-margin-top: var(--header-height);
 }
 
 /* MODAL POPUP - Mobile First */
@@ -451,19 +457,21 @@ label > textarea:not([type="checkbox"]):has(+ span):not(:focus):placeholder-show
   will-change: transform, opacity;
 }
 
+/* доступность: если пользователь просит уменьшить движения — отключаем анимации */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
     clip-path: none;
   }
-  .reveal[data-anim] {
-    transition: none;
-    animation: none;
+  .reveal[data-anim],
+  .is-animated[data-anim] {
+    transition: none !important;
+    animation: none !important;
   }
 }
 
-/* ключевые кадры */
+/* ключевые кадры (как у вас) */
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -523,24 +531,25 @@ label > textarea:not([type="checkbox"]):has(+ span):not(:focus):placeholder-show
   }
 }
 
-/* утилиты для запуска */
+/* ---- УТИЛИТЫ ЗАПУСКА (тут добавляем delay) ---- */
+/* Вариант с delay в шортхенде: animation: name duration timing-function delay fill-mode */
 .is-animated[data-anim="fade-up"] {
-  animation: fade-up var(--dur) var(--ease) both;
+  animation: fade-up var(--dur) var(--ease) var(--delay) both;
 }
 .is-animated[data-anim="fade-in"] {
-  animation: fade-in var(--dur-short) var(--ease) both;
+  animation: fade-in var(--dur-short) var(--ease) var(--delay) both;
 }
 .is-animated[data-anim="slide-in-left"] {
-  animation: slide-in-left var(--dur) var(--ease) both;
+  animation: slide-in-left var(--dur) var(--ease) var(--delay) both;
 }
 .is-animated[data-anim="slide-in-right"] {
-  animation: slide-in-right var(--dur) var(--ease) both;
+  animation: slide-in-right var(--dur) var(--ease) var(--delay) both;
 }
 .is-animated[data-anim="fade-scale"] {
-  animation: fade-scale var(--dur) var(--ease) both;
+  animation: fade-scale var(--dur) var(--ease) var(--delay) both;
 }
 .is-animated[data-anim="clip-reveal"] {
-  animation: clip-reveal var(--dur-long) var(--ease) both;
+  animation: clip-reveal var(--dur-long) var(--ease) var(--delay) both;
 }
 
 #toast-container {

@@ -1,6 +1,7 @@
 /* –––––––––– HERO ––––––––– */
 
 section.hero {
+  padding-top: calc(var(--header-height) + var(--section-padding));
   position: relative;
 }
 
@@ -220,6 +221,9 @@ section.about .swiper ul li img {
 }
 section.about .swiper ul li div {
   margin: 2rem;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
 }
 section.about .swiper ul li div h3 {
   font-weight: 500;
@@ -289,6 +293,7 @@ section.portfolio h2 {
   line-height: 1.1;
   color: var(--color-black);
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 section.portfolio > p {
   font-weight: 500;
@@ -777,7 +782,7 @@ section.features .promo .footer .btn {
   }
   section.features h2 {
     position: sticky;
-    top: 2rem;
+    top: calc(var(--header-height) + 2rem);
     height: fit-content;
 
     grid-row: span 2;
@@ -848,7 +853,7 @@ section.tarrifs > ul > li:last-child .header .btn {
   border-color: var(--color-white);
   color: var(--color-white);
 }
-@media (hover:hover) {
+@media (hover: hover) {
   section.tarrifs > ul > li:last-child .header .btn:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
@@ -976,7 +981,7 @@ section.cta .card img {
   pointer-events: none;
   user-select: none;
 
-  transform: rotate(30deg);
+  rotate: 30deg;
 }
 section.cta .card .header {
   height: fit-content;
@@ -1076,29 +1081,30 @@ section.cta .caution p {
   }
 }
 
-/* –––––––––––– PROCCESSES ––––––––– */
+/* –––––––––––– processes ––––––––– */
 
-section.proccesses h2 {
+section.processes h2 {
   text-align: center;
   font-weight: 500;
   font-size: var(--text-xl);
   line-height: 1.125;
   color: var(--color-black);
+  margin-bottom: 0.5rem;
 }
-section.proccesses > p {
+section.processes > p {
   text-align: center;
   font-weight: 500;
   font-size: var(--text-md);
   line-height: 1.2;
 }
-section.proccesses ul {
+section.processes ul {
   display: grid;
   gap: 1rem;
   margin-top: 3rem;
 
   counter-reset: list 0;
 }
-section.proccesses ul li {
+section.processes ul li {
   border-radius: 50px;
   background-color: #fff;
   padding: 2rem;
@@ -1107,7 +1113,7 @@ section.proccesses ul li {
   gap: 2rem;
   align-items: center;
 }
-section.proccesses ul li h3 {
+section.processes ul li h3 {
   font-weight: 500;
   font-size: var(--text-lg);
   line-height: 1.1;
@@ -1115,7 +1121,7 @@ section.proccesses ul li h3 {
 
   margin-bottom: 1rem;
 }
-section.proccesses ul li h3::before {
+section.processes ul li h3::before {
   content: counter(list, decimal-leading-zero) ".";
   counter-increment: list;
   margin-right: 0.5rem;
@@ -1125,26 +1131,26 @@ section.proccesses ul li h3::before {
   color: var(--color-primary);
 }
 
-section.proccesses ul li p {
+section.processes ul li p {
   font-weight: 300;
   font-size: var(--text-sm);
   color: var(--color-black);
 }
 
-section.proccesses ul li img {
+section.processes ul li img {
   width: 130px;
   height: 130px;
   object-fit: contain;
 }
 
 @media screen and (min-width: 480px) {
-  section.proccesses ul li {
+  section.processes ul li {
     grid-template-columns: auto 1fr;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  section.proccesses ul {
+  section.processes ul {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1189,6 +1195,9 @@ section.reviews .reviews-swiper-container .swiper .swiper-slide .header {
 }
 section.reviews .reviews-swiper-container .swiper .swiper-slide .header > img {
   border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
 }
 section.reviews .reviews-swiper-container .swiper .swiper-slide .header span {
   display: flex;

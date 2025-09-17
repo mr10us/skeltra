@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,48 +19,78 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
+    <script>document.documentElement.classList.remove('no-js');</script>
+
     <title>Skeltra</title>
   </head>
   <body>
-    <header class="container">
-      <a href="#" class="logo">
-        <img src="assets/img/logo.svg" alt="logo image" width="120" height="30" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#">Про нас</a></li>
-          <li><a href="#">Портфоліо</a></li>
-          <li><a href="#">Чому саме ми?</a></li>
-          <li><a href="#">Прайс</a></li>
-          <li><a href="#">Процеси</a></li>
-          <li><a href="#">Відгуки</a></li>
-          <li><a href="#">Контакти</a></li>
-        </ul>
-      </nav>
-      <div class="btn secondary">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11.871 5.32596C13.0709 5.52705 14.1608 6.09377 15.031 6.96214C15.9011 7.8305 16.4644 8.91824 16.6705 10.1157M12.0542 1.40002C14.1883 1.76108 16.1347 2.77113 17.6826 4.31133C19.2306 5.85611 20.2381 7.7985 20.5999 9.92828M18.9329 18.4017C18.9329 18.4017 17.7742 19.5397 17.4903 19.8733C17.0277 20.3669 16.4827 20.6 15.7683 20.6C15.6996 20.6 15.6263 20.6 15.5576 20.5954C14.1974 20.5086 12.9335 19.9785 11.9855 19.526C9.39335 18.2737 7.11724 16.4959 5.22582 14.2427C3.66415 12.3643 2.61997 10.6275 1.92844 8.76284C1.50253 7.62482 1.34682 6.73818 1.41551 5.90181C1.46131 5.36708 1.6674 4.92375 2.04751 4.54442L3.60919 2.98593C3.83359 2.77569 4.07174 2.66144 4.3053 2.66144C4.59382 2.66144 4.82739 2.83511 4.97394 2.98136C4.97852 2.98593 4.9831 2.9905 4.98768 2.99507C5.26704 3.25558 5.53266 3.52523 5.81202 3.81316C5.95399 3.95941 6.10054 4.10566 6.24709 4.25648L7.49735 5.50419C7.9828 5.98864 7.9828 6.43654 7.49735 6.92099C7.36454 7.05353 7.23631 7.18607 7.1035 7.31404C6.7188 7.70709 7.021 7.40551 6.62257 7.76199C6.61341 7.77113 6.60425 7.7757 6.59967 7.78485C6.20582 8.17789 6.27909 8.5618 6.36153 8.82231C6.36611 8.83602 6.37069 8.84973 6.37527 8.86345C6.70042 9.64954 7.15839 10.3899 7.85451 11.272L7.85909 11.2766C9.12308 12.8305 10.4558 14.0416 11.9259 14.9694C12.1136 15.0882 12.306 15.1842 12.4892 15.2756C12.654 15.3579 12.8097 15.4356 12.9426 15.5179C12.9609 15.527 12.9792 15.5407 12.9975 15.5499C13.1532 15.6275 13.2998 15.6641 13.4509 15.6641C13.831 15.6641 14.0692 15.4265 14.147 15.3488L15.0447 14.4529C15.2004 14.2975 15.4477 14.1101 15.7362 14.1101C16.0202 14.1101 16.2537 14.2884 16.3957 14.4438C16.4003 14.4483 16.4003 14.4483 16.4049 14.4529L18.9283 16.9712C19.4 17.4373 18.9329 18.4017 18.9329 18.4017Z"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        Зв’язатись з нами
+    <header>
+      <div>
+        <div class="container">
+          <button class="logo" onclick="window.scrollTo(0,0, {behavior: 'smooth'});">
+            <img class="shorty" src="assets/img/logo_short.svg" alt="short logo image" width="21" height="21" />
+            <img src="assets/img/logo.svg" alt="logo image" width="120" height="30" />
+          </button>
+
+          <nav>
+            <ul>
+              <li><a href="#about">Про нас</a></li>
+              <li><a href="#portfolio">Портфоліо</a></li>
+              <li><a href="#advantages">Чому саме ми?</a></li>
+              <li><a href="#tarrifs">Прайс</a></li>
+              <li><a href="#processes">Процеси</a></li>
+              <li><a href="#reviews">Відгуки</a></li>
+              <!-- <li><a href="#contacts">Контакти</a></li> -->
+            </ul>
+          </nav>
+          <button class="btn secondary" data-popup="contact">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.871 5.32596C13.0709 5.52705 14.1608 6.09377 15.031 6.96214C15.9011 7.8305 16.4644 8.91824 16.6705 10.1157M12.0542 1.40002C14.1883 1.76108 16.1347 2.77113 17.6826 4.31133C19.2306 5.85611 20.2381 7.7985 20.5999 9.92828M18.9329 18.4017C18.9329 18.4017 17.7742 19.5397 17.4903 19.8733C17.0277 20.3669 16.4827 20.6 15.7683 20.6C15.6996 20.6 15.6263 20.6 15.5576 20.5954C14.1974 20.5086 12.9335 19.9785 11.9855 19.526C9.39335 18.2737 7.11724 16.4959 5.22582 14.2427C3.66415 12.3643 2.61997 10.6275 1.92844 8.76284C1.50253 7.62482 1.34682 6.73818 1.41551 5.90181C1.46131 5.36708 1.6674 4.92375 2.04751 4.54442L3.60919 2.98593C3.83359 2.77569 4.07174 2.66144 4.3053 2.66144C4.59382 2.66144 4.82739 2.83511 4.97394 2.98136C4.97852 2.98593 4.9831 2.9905 4.98768 2.99507C5.26704 3.25558 5.53266 3.52523 5.81202 3.81316C5.95399 3.95941 6.10054 4.10566 6.24709 4.25648L7.49735 5.50419C7.9828 5.98864 7.9828 6.43654 7.49735 6.92099C7.36454 7.05353 7.23631 7.18607 7.1035 7.31404C6.7188 7.70709 7.021 7.40551 6.62257 7.76199C6.61341 7.77113 6.60425 7.7757 6.59967 7.78485C6.20582 8.17789 6.27909 8.5618 6.36153 8.82231C6.36611 8.83602 6.37069 8.84973 6.37527 8.86345C6.70042 9.64954 7.15839 10.3899 7.85451 11.272L7.85909 11.2766C9.12308 12.8305 10.4558 14.0416 11.9259 14.9694C12.1136 15.0882 12.306 15.1842 12.4892 15.2756C12.654 15.3579 12.8097 15.4356 12.9426 15.5179C12.9609 15.527 12.9792 15.5407 12.9975 15.5499C13.1532 15.6275 13.2998 15.6641 13.4509 15.6641C13.831 15.6641 14.0692 15.4265 14.147 15.3488L15.0447 14.4529C15.2004 14.2975 15.4477 14.1101 15.7362 14.1101C16.0202 14.1101 16.2537 14.2884 16.3957 14.4438C16.4003 14.4483 16.4003 14.4483 16.4049 14.4529L18.9283 16.9712C19.4 17.4373 18.9329 18.4017 18.9329 18.4017Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p>Зв’язатись з нами</p>
+          </button>
+
+          <div class="burger" tabindex="0" onclick="this.classList.toggle('active')" aria-label="mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="mobile-menu">
+            <div class="menu__content container">
+              <nav>
+                <ul>
+                  <li><a href="#about">Про нас</a></li>
+                  <li><a href="#portfolio">Портфоліо</a></li>
+                  <li><a href="#advantages">Чому саме ми?</a></li>
+                  <li><a href="#tarrifs">Прайс</a></li>
+                  <li><a href="#processes">Процеси</a></li>
+                  <li><a href="#reviews">Відгуки</a></li>
+                  <!-- <li><a href="#contacts">Контакти</a></li> -->
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero container">
-        <ul>
-          <li class="main">
+        <ul data-stagger="0.3">
+          <li class="main reveal" data-anim="slide-in-left">
             <img class="bg" src="assets/img/hero.png" alt="background image" width="100%" height="100%" />
             <img src="assets/img/Logo.svg" alt="logo imace" width="144" height="30" />
             <div>
               <h1><span>Skeltra –</span> там, де девелопмент зустрічає дизайн</h1>
               <p>Digital-студія, що створює унікальні рішення для ринку нерухомості</p>
             </div>
-            <button class="btn primary">
+            <button class="btn primary" data-popup="contact">
               Залишити заявку
               <span>
                 <svg width="14" height="8">
@@ -69,12 +99,12 @@
               </span>
             </button>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <img class="first" src="assets/img/hero_right_1.png" alt="futuristic house image" width="600" height="600" />
             <img class="second" src="assets/img/hero_right_2.png" alt="laptop image" width="500" height="300" />
           </li>
         </ul>
-        <button class="down-button">
+        <button class="down-button" onclick="about.scrollIntoView({behavior: 'smooth'});">
           <div>
             <svg width="16" height="45" viewBox="0 0 16 45">
               <path
@@ -86,13 +116,13 @@
         </button>
       </section>
 
-      <section class="about container">
-        <div>
-          <span>
+      <section class="about container" id="about">
+        <div data-stagger="0.06">
+          <span class="reveal" data-anim="slide-in-left">
             <h2>Про нас</h2>
             <p>Команда, яка допоможе реалізувати будь-яку мрію</p>
           </span>
-          <button class="btn primary">
+          <button class="btn primary reveal" data-anim="slide-in-right">
             Детальніше про команду
             <span>
               <svg width="14" height="8">
@@ -112,45 +142,38 @@
           <div class="swiper about-swiper">
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
+                <img src="assets/img/team/d-berest.jpg" alt="employee image" width="345" height="347" />
                 <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
+                  <h3>Дмитро Берест</h3>
+                  <p>PPC CPM, CPA, CPS</p>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
+                <img src="assets/img/team/d-kryvopyshyn.jpg" alt="employee image" width="345" height="347" />
                 <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
+                  <h3>Дмитро Кривопишин</h3>
+                  <p>PM</p>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
+                <img src="assets/img/team/o-volyk.jpg" alt="employee image" width="345" height="347" />
                 <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
+                  <h3>Олена Волик</h3>
+                  <p>PM</p>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
+                <img src="assets/img/team/m-kotelva.jpg" alt="employee image" width="345" height="347" />
                 <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
+                  <h3>Котельва Максим</h3>
+                  <p>Fullstack Developer</p>
                 </div>
               </li>
               <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
+                <img src="assets/img/team/a-minenko.jpg" alt="employee image" width="345" height="347" />
                 <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
-                </div>
-              </li>
-              <li class="swiper-slide">
-                <img src="assets/img/dude.png" alt="employee image" width="345" height="347" />
-                <div>
-                  <h3>Вася Пупкин</h3>
-                  <p>CEO</p>
+                  <h3>Миненко Артем</h3>
+                  <p>Fullstack Developer</p>
                 </div>
               </li>
             </ul>
@@ -164,7 +187,7 @@
 
           <div class="swiper-pagination"></div>
         </div>
-        <a href="#" class="btn primary">
+        <a href="https://vsolo.live/uk/team/" target="_blank" class="btn primary">
           Детальніше про команду
           <span>
             <svg width="14" height="8">
@@ -174,9 +197,9 @@
         </a>
       </section>
 
-      <section class="portfolio container">
-        <h2>Портфоліо</h2>
-        <p>Успішні кейси, що були реалізовані нашою командою</p>
+      <section class="portfolio container" id="portfolio">
+        <h2 class="reveal" data-anim="fade-scale">Портфоліо</h2>
+        <p class="reveal" data-anim="fade-scale" data-delay="0.2">Успішні кейси, що були реалізовані нашою командою</p>
 
         <div class="portfolio-swiper-container">
           <div class="swiper-button-prev">
@@ -185,8 +208,8 @@
             </svg>
           </div>
           <div class="swiper portfolio-swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
+            <ul class="swiper-wrapper" data-stagger="0.06">
+              <li class="swiper-slide reveal" data-anim="slide-in-left">
                 <img src="assets/img/portfolio/portfolio_1.png" alt="portfolio image" width="340" height="250" />
                 <div>
                   <h3>Apartments on Northern Cyprus Presentation</h3>
@@ -198,7 +221,7 @@
                   </a>
                 </div>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide reveal" data-anim="slide-in-left">
                 <img src="assets/img/portfolio/portfolio_2.png" alt="portfolio image" width="340" height="250" />
                 <div>
                   <h3>Khaled Belfas</h3>
@@ -210,7 +233,7 @@
                   </a>
                 </div>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide reveal" data-anim="slide-in-left">
                 <img src="assets/img/portfolio/portfolio_3.png" alt="portfolio image" width="340" height="250" />
                 <div>
                   <h3>Real Estate Agency INEX</h3>
@@ -222,7 +245,7 @@
                   </a>
                 </div>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide reveal" data-anim="slide-in-left">
                 <img src="assets/img/portfolio/portfolio_4.png" alt="portfolio image" width="340" height="250" />
                 <div>
                   <h3>International Partnership Program Presentation</h3>
@@ -241,7 +264,7 @@
               <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
             </svg>
           </div>
-          <a href="#" class="view-more">
+          <a href="https://www.behance.net/vsololiver" target="_blank" class="view-more reveal" data-anim="fade-up">
             <img src="assets/img/portfolio.png" alt="background image" width="100%" height="200" />
             <p>Перегляньте більше наших кейсів у</p>
             <span>Bēhance</span>
@@ -254,11 +277,11 @@
         </div>
       </section>
 
-      <section class="advantages container">
-        <h2>Чому саме ми?</h2>
+      <section class="advantages container" id="advantages">
+        <h2 class="reveal" data-anim="fade-up">Чому саме ми?</h2>
 
-        <ul>
-          <li>
+        <ul data-stagger="0.1">
+          <li class="reveal" data-anim="slide-in-left">
             <h3>Ми — не просто студія.<br /><b>Ми партнери</b> у зростанні вашого бізнесу.</h3>
             <p>
               В <b>Skeltra</b> ми спеціалізуємось на створенні digital-рішень саме для ринку нерухомості. Це означає, що ми розуміємо ваші цілі, складнощі і цінність кожного клієнта. Ми не просто
@@ -266,21 +289,21 @@
             </p>
             <img src="assets/img/advantages/laptop.png" alt="background image" />
           </li>
-          <li>
-            <ul>
-              <li>
+          <li class="reveal" data-anim="slide-in-right">
+            <ul data-stagger="0.3">
+              <li class="reveal" data-anim="fade-scale">
                 <h3>Глибоке розуміння ринку</h3>
                 <p>Ми знаємо, як мислить ваш покупець. І проєктуємо все — від структури до візуалу — так, щоб вести його до дії.</p>
               </li>
-              <li>
+              <li class="reveal" data-anim="fade-scale">
                 <h3>Команда, яка мислить як ви</h3>
                 <p>У нас — проджектори, дизайнери й розробники, які звикли працювати в темпі реального бізнесу. Без води. Без затримок. З результатом.</p>
               </li>
-              <li>
+              <li class="reveal" data-anim="fade-scale">
                 <h3>Дизайн, що будує довіру</h3>
                 <p>Ми створюємо сайти, які виглядають преміально, працюють швидко й переконують уже з першого скролу.</p>
               </li>
-              <li>
+              <li class="reveal" data-anim="fade-scale">
                 <h3>Гнучкість та прозорість</h3>
                 <p>Ми підлаштовуємось під ваш графік, бюджет та задачі. Ви завжди знаєте, що відбувається — і що буде далі.</p>
               </li>
@@ -290,64 +313,64 @@
         </ul>
       </section>
 
-      <section class="features container">
+      <section class="features container" id="features">
         <h2>Ми розуміємо, що важливо вашим покупцям:</h2>
-        <ul>
-          <li>
+        <ul data-stagger="0.1">
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Зручна навігація</h3>
             <p>інтуїтивно зрозуміла структура, де користувач без зусиль знаходить свій майбутній будинок.</p>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Інтерактивні 3D-схеми квартир</h3>
             <p>покупець бачить реальне планування, орієнтацію по сторонах світу, поверх і навіть розміщення меблів.</p>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Інтерактивна мапа комплексу</h3>
             <p>з вибором секції, поверху та конкретної квартири.</p>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Обліт об’єкту в 3D</h3>
             <p>створюємо ефект особистої присутності. Ідеально для тих, хто купує дистанційно.</p>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Відображення актуальної інформації</h3>
             <p>наявність, статус будівництва, розстрочки, готовність, документи.</p>
           </li>
-          <li>
+          <li class="reveal" data-anim="slide-in-right">
             <h3>Секція “Живи тут”</h3>
             <p>інтегруємо карту інфраструктури: школи, ТРЦ, зупинки, кав’ярні, парки — усе поруч.</p>
           </li>
         </ul>
-        <div class="promo">
+        <div class="promo reveal" data-anim="fade-up">
           <div class="header">
             <span>Skeltra</span>
             <p>коли потрібно зробити якісно, точно і в точку!</p>
           </div>
           <div class="footer">
             <p>Зв’яжіться з нами, і ми покажемо, як виглядає digital-рішення, яке дійсно працює.</p>
-            <a href="#" class="btn primary">
+            <button data-popup="contact" class="btn primary">
               Зв’язатися з нами
               <svg width="14" height="8">
                 <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="tarrifs container">
+      <section class="tarrifs container" id="tarrifs">
         <h2>Тарифи</h2>
 
         <ul>
           <li>
             <div class="header">
-              <p>від <span>$200</span></p>
-              <a href="#" class="btn secondary" aria-label="starter pack link">
+              <p>від <span>$1000</span></p>
+              <button data-popup="contact" class="btn secondary" aria-label="starter pack link">
                 <span>starter pack link</span>
                 <svg width="23" height="23">
                   <use xlink:href="assets/img/arrows.svg#link" href="assets/img/arrows.svg#link"></use>
                 </svg>
-              </a>
+              </button>
             </div>
             <div class="body">
               <h3>Starter</h3>
@@ -362,7 +385,7 @@
 
               <dl>
                 <dt>Термін:</dt>
-                <dd>від 2 до 6 міс.</dd>
+                <dd>від 2 днів до 1 міс.</dd>
               </dl>
               <dl>
                 <dt>Підходить для:</dt>
@@ -370,22 +393,22 @@
               </dl>
             </div>
 
-            <button class="btn primary footer">
+            <a href="#form" class="btn primary footer">
               Залишити заявку
               <svg width="23" height="23">
                 <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li>
             <div class="header">
-              <p>від <span>$400</span></p>
-              <a href="#" class="btn secondary" aria-label="smart pack link">
+              <p>від <span>$1500</span></p>
+              <button data-popup="contact" class="btn secondary" aria-label="smart pack link">
                 <span>smart pack link</span>
                 <svg width="23" height="23">
                   <use xlink:href="assets/img/arrows.svg#link" href="assets/img/arrows.svg#link"></use>
                 </svg>
-              </a>
+              </button>
             </div>
             <div class="body">
               <h3>Smart</h3>
@@ -401,7 +424,7 @@
 
               <dl>
                 <dt>Термін:</dt>
-                <dd>від 2 до 6 міс.</dd>
+                <dd>від 1 тижня до 2 міс.</dd>
               </dl>
               <dl>
                 <dt>Підходить для:</dt>
@@ -409,22 +432,22 @@
               </dl>
             </div>
 
-            <button class="btn primary footer">
+            <a href="#form" class="btn primary footer">
               Залишити заявку
               <svg width="23" height="23">
                 <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
               </svg>
-            </button>
+            </a>
           </li>
           <li>
             <div class="header">
-              <p>від <span>$600</span></p>
-              <a href="#" class="btn secondary" aria-label="pro pack link">
+              <p>від <span>$2000</span></p>
+              <button data-popup="contact" class="btn secondary" aria-label="pro pack link">
                 <span>pro pack link</span>
                 <svg width="23" height="23">
                   <use xlink:href="assets/img/arrows.svg#link" href="assets/img/arrows.svg#link"></use>
                 </svg>
-              </a>
+              </button>
             </div>
             <div class="body">
               <h3>Pro</h3>
@@ -441,7 +464,7 @@
 
               <dl>
                 <dt>Термін:</dt>
-                <dd>від 2 до 6 міс.</dd>
+                <dd>від 1 тижня до 4 міс.</dd>
               </dl>
               <dl>
                 <dt>Підходить для:</dt>
@@ -449,40 +472,40 @@
               </dl>
             </div>
 
-            <button class="btn primary footer">
+            <a href="#form" class="btn primary footer">
               Залишити заявку
               <svg width="23" height="23">
                 <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
               </svg>
-            </button>
+            </a>
           </li>
         </ul>
       </section>
 
-      <section class="cta container">
-        <div class="card">
+      <section class="cta container" id="cta">
+        <div class="card reveal" data-anim="fade-scale">
           <div>
             <div class="header">
               <span>Skeltra</span>
             </div>
-            <div class="body">
-              <h2>Хочете більшого?</h2>
-              <p>Ми пропонуємо не лише створення сайтів, а й повний цифровий супровід: від 3D-обльотів об'єктів до інтеграції CRM, таргетованої реклами та SEO.</p>
-              <p>У вас є особливий запит або нестандартна ідея? Ми втілимо її в життя! Залиште заявку — і ми надішлемо персоналізовану пропозицію з додатковими послугами під ваш запит.</p>
+            <div class="body" data-stagger="0.3">
+              <h2 class="reveal" data-anim="slide-in-left">Хочете більшого?</h2>
+              <p class="reveal" data-anim="slide-in-left">Ми пропонуємо не лише створення сайтів, а й повний цифровий супровід: від 3D-обльотів об'єктів до інтеграції CRM, таргетованої реклами та SEO.</p>
+              <p class="reveal" data-anim="slide-in-left">У вас є особливий запит або нестандартна ідея? Ми втілимо її в життя! Залиште заявку — і ми надішлемо персоналізовану пропозицію з додатковими послугами під ваш запит.</p>
             </div>
             <div class="footer">
-              <button class="btn primary">
+              <a href="#form" class="btn primary">
                 Залишити заявку
                 <span>
                   <svg width="23" height="23">
                     <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
                   </svg>
                 </span>
-              </button>
+              </a>
               <p>Давайте обговоримо ваш проєкт — швидко, зручно і по суті!</p>
             </div>
           </div>
-          <img src="assets/img/up.png" alt="skeltra" width="760" height="760" />
+          <img class="reveal" data-anim="fade-up" data-delay="0.5" src="assets/img/up.png" alt="skeltra" width="760" height="760" />
         </div>
         <div class="caution">
           <h2>Зверніть увагу</h2>
@@ -493,50 +516,50 @@
         </div>
       </section>
 
-      <section class="proccesses container">
-        <h2>Процеси</h2>
-        <p>Як ми працюємо?</p>
+      <section class="processes container" id="processes">
+        <h2 class="reveal" data-anim="fade-scale">Процеси</h2>
+        <p class="reveal" data-anim="fade-scale">Як ми працюємо?</p>
 
-        <ul>
-          <li>
-            <img src="assets/img/proccesses/proccess_1.png" alt="proccesses img" width="266" height="190" />
+        <ul data-stagger="0.2">
+          <li class="reveal" data-anim="slide-in-left">
+            <img src="assets/img/processes/process_1.png" alt="processes img" width="266" height="190" />
             <div>
               <h3>Бриф</h3>
-              <p>Ми створюємо ваш головний інструмент продажу - ваш веб-сайт, що стане не просто візитною карткою, а й місцем, де ваші клієнти знайдуть необхідну інформацію...</p>
+              <p>Разом із вами визначаємо цілі, завдання та ключові вимоги до майбутнього проєкту.</p>
             </div>
           </li>
-          <li>
-            <img src="assets/img/proccesses/proccess_2.png" alt="proccesses img" width="266" height="190" />
+          <li class="reveal" data-anim="slide-in-right">
+            <img src="assets/img/processes/process_2.png" alt="processes img" width="266" height="190" />
             <div>
               <h3>Прототип</h3>
-              <p>Ми створюємо ваш головний інструмент продажу - ваш веб-сайт, що стане не просто візитною карткою, а й місцем, де ваші клієнти знайдуть необхідну інформацію...</p>
+              <p>Створюємо схему та структуру сайту, щоб ви заздалегідь бачили, як виглядатиме продукт.</p>
             </div>
           </li>
-          <li>
-            <img src="assets/img/proccesses/proccess_3.png" alt="proccesses img" width="266" height="190" />
+          <li class="reveal" data-anim="slide-in-left">
+            <img src="assets/img/processes/process_3.png" alt="processes img" width="266" height="190" />
             <div>
               <h3>Дизайн</h3>
-              <p>Ми створюємо ваш головний інструмент продажу - ваш веб-сайт, що стане не просто візитною карткою, а й місцем, де ваші клієнти знайдуть необхідну інформацію...</p>
+              <p>Розробляємо сучасний і зручний інтерфейс, що поєднує стильність та простоту для користувачів.</p>
             </div>
           </li>
-          <li>
-            <img src="assets/img/proccesses/proccess_4.png" alt="proccesses img" width="266" height="190" />
+          <li class="reveal" data-anim="slide-in-right">
+            <img src="assets/img/processes/process_4.png" alt="processes img" width="266" height="190" />
             <div>
               <h3>Розробка</h3>
-              <p>Ми створюємо ваш головний інструмент продажу - ваш веб-сайт, що стане не просто візитною карткою, а й місцем, де ваші клієнти знайдуть необхідну інформацію...</p>
+              <p>Перетворюємо дизайн у функціональний сайт із потрібними інтеграціями та інструментами.</p>
             </div>
           </li>
-          <li>
-            <img src="assets/img/proccesses/proccess_5.png" alt="proccesses img" width="266" height="190" />
+          <li class="reveal" data-anim="slide-in-left">
+            <img src="assets/img/processes/process_5.png" alt="processes img" width="266" height="190" />
             <div>
               <h3>Запуск/підтримка</h3>
-              <p>Ми створюємо ваш головний інструмент продажу - ваш веб-сайт, що стане не просто візитною карткою, а й місцем, де ваші клієнти знайдуть необхідну інформацію...</p>
+              <p>Запускаємо готовий ресурс та забезпечуємо його стабільну роботу й подальший розвиток.</p>
             </div>
           </li>
         </ul>
       </section>
 
-      <section class="reviews container">
+      <section class="reviews container" id="reviews">
         <h2>Відгуки</h2>
 
         <div class="reviews-swiper-container">
@@ -549,127 +572,181 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/danilov.jpg" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">DFSTORE.COM.UA</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Oleksandr Danilov</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">Founder</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>Доброго дня усім мене звати Олександр Данілов я власник інтернет-магазину Design for Fitness...</p>
                   </blockquote>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/baigozina.png" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">Hit Hunt</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Irina Baigozina</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">СEO</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>Всім привіт, мене звати Ірина. Я засновник і керівник IT Digital рекрутингового агентства...</p>
                   </blockquote>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/khaled.jpg" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">Khaled Belfas estate</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Khaled Belfas</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">Founder</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>Hello Everyone. First of all, I would like to thank Vladimir and his team for building my first website...</p>
                   </blockquote>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/cudnova.jpg" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">hotel "ZORNICKA"</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Svitlana Chudnova</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">Co-founder</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>I want to thank for the excellent work and professional approach of all the specialists involved in the creation...</p>
                   </blockquote>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/roksolana.png" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">European kindergarden</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Behar Roksolana</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">Co-founder</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>Усім привіт! Мене звати Роксолана Бегар і я співвласниця дитячого садочку "Європейський"...</p>
                   </blockquote>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="header">
-                  <img src="assets/img/dude.png" alt="author image" width="100" height="100" />
+                  <img src="assets/img/reviews/romanv.png" alt="author image" width="100" height="100" />
                   <div>
-                    <p class="company">Company Petro</p>
+                    <p class="company">Rozmova™</p>
                     <span>
-                      <h3>Петро Пупкін</h3>
+                      <h3>Roman Vashchenko</h3>
                       <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
                     </span>
-                    <p class="position">CEO</p>
+                    <p class="position">Сo-founder</p>
                   </div>
                 </div>
                 <div class="body">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <p>Мене звати Рома. Я співзасновник бренду Розмова. Розмова – це бренд трикотажного одягу...</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="assets/img/reviews/slezenko.png" alt="author image" width="100" height="100" />
+                  <div>
+                    <p class="company"></p>
+                    <span>
+                      <h3>Anatolii Sliezenko</h3>
+                      <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
+                    </span>
+                    <p class="position">Internet marketer, arbitrage specialist</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <blockquote>
+                    <p>Мене звати Анатолій Слезенко. Я фахівець з просування в Інтернеті, реклами Google...</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="assets/img/reviews/berstein.png" alt="author image" width="100" height="100" />
+                  <div>
+                    <p class="company">pink.gg</p>
+                    <span>
+                      <h3>Alex Berstein</h3>
+                      <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
+                    </span>
+                    <p class="position">Head of Compliance</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <blockquote>
+                    <p>My name is Alex Berstein. I am a lawyer and CEO of spherum.finance (Munich, Germany)...</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="assets/img/reviews/dobrovitsky.png" alt="author image" width="100" height="100" />
+                  <div>
+                    <p class="company">Glitter Finance</p>
+                    <span>
+                      <h3>Illia Dobrovitsky</h3>
+                      <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
+                    </span>
+                    <p class="position">Founder and CEO</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <blockquote>
+                    <p>My name is Illia Dobrovitsky. I am the founder of glitter.finance, DeFi project on the Solana ecosystem...</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="assets/img/reviews/suprun.png" alt="author image" width="100" height="100" />
+                  <div>
+                    <p class="company">Gakrus agency</p>
+                    <span>
+                      <h3>Maksim Suprun</h3>
+                      <img src="assets/img/socials/linked_blue.png" alt="linkedIn logo" width="24" height="24" />
+                    </span>
+                    <p class="position">Founder</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <blockquote>
+                    <p>Меня зовут Максим Супрун, я - владелец агентства переводов и копирайтинга Gakrus. Мы работаем с ...</p>
                   </blockquote>
                 </div>
               </div>
@@ -684,7 +761,7 @@
         </div>
       </section>
 
-      <section class="form container">
+      <section class="form container" id="form">
         <div>
           <img src="assets/img/logo.svg" alt="logo image" width="144" height="30" />
           <h2>Шлях до кращого рішення для Вашого бізнесу починається тут!</h2>
@@ -726,7 +803,7 @@
           <p>Digital-студія, що створює унікальні рішення для ринку нерухомості</p>
 
           <div class="socials">
-            <a href="#" target="_blank"
+            <a href="https://www.instagram.com/skeltra_?igsh=MTh5MTd2eWE0aHIzcQ==" target="_blank"
               ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.87599 10C6.87599 8.27417 8.27466 6.87475 10.0005 6.87475C11.7263 6.87475 13.1257 8.27417 13.1257 10C13.1257 11.7258 11.7263 13.1252 10.0005 13.1252C8.27466 13.1252 6.87599 11.7258 6.87599 10ZM5.18654 10C5.18654 12.6587 7.34174 14.8139 10.0005 14.8139C12.6592 14.8139 14.8144 12.6587 14.8144 10C14.8144 7.34125 12.6592 5.18605 10.0005 5.18605C7.34174 5.18605 5.18654 7.34125 5.18654 10ZM13.88 4.99517C13.8799 5.21768 13.9458 5.43521 14.0694 5.62027C14.1929 5.80532 14.3685 5.94959 14.5741 6.03482C14.7796 6.12005 15.0058 6.14242 15.224 6.0991C15.4423 6.05577 15.6428 5.94871 15.8002 5.79144C15.9576 5.63417 16.0648 5.43375 16.1083 5.21554C16.1518 4.99733 16.1296 4.77112 16.0445 4.56552C15.9595 4.35992 15.8154 4.18416 15.6304 4.06047C15.4454 3.93678 15.228 3.87071 15.0055 3.87063H15.005C14.7068 3.87076 14.4208 3.98927 14.2098 4.20012C13.9989 4.41098 13.8803 4.69693 13.88 4.99517ZM6.21299 17.631C5.29896 17.5894 4.80216 17.4371 4.47201 17.3085C4.03431 17.1381 3.72201 16.9352 3.39366 16.6073C3.06531 16.2794 2.86206 15.9674 2.69241 15.5297C2.56371 15.1997 2.41146 14.7027 2.36991 13.7887C2.32446 12.8005 2.31539 12.5036 2.31539 10.0001C2.31539 7.4965 2.32521 7.20047 2.36991 6.21145C2.41154 5.29742 2.56491 4.80145 2.69241 4.47047C2.86281 4.03277 3.06576 3.72047 3.39366 3.39213C3.72156 3.06378 4.03356 2.86053 4.47201 2.69088C4.80201 2.56218 5.29896 2.40992 6.21299 2.36837C7.20119 2.32292 7.49804 2.31385 10.0005 2.31385C12.5029 2.31385 12.8001 2.32367 13.7891 2.36837C14.7031 2.41 15.1991 2.56337 15.5301 2.69088C15.9678 2.86053 16.2801 3.06422 16.6084 3.39213C16.9368 3.72003 17.1393 4.03277 17.3097 4.47047C17.4384 4.80047 17.5906 5.29742 17.6322 6.21145C17.6776 7.20047 17.6867 7.4965 17.6867 10.0001C17.6867 12.5036 17.6776 12.7997 17.6322 13.7887C17.5906 14.7027 17.4376 15.1995 17.3097 15.5297C17.1393 15.9674 16.9363 16.2797 16.6084 16.6073C16.2805 16.9349 15.9678 17.1381 15.5301 17.3085C15.2001 17.4372 14.7031 17.5895 13.7891 17.631C12.8009 17.6765 12.5041 17.6855 10.0005 17.6855C7.49691 17.6855 7.20089 17.6765 6.21299 17.631ZM6.13536 0.681775C5.13734 0.727225 4.45536 0.885475 3.85979 1.11722C3.24299 1.35655 2.72084 1.67762 2.19906 2.19857C1.67729 2.71952 1.35704 3.2425 1.11771 3.8593C0.885963 4.45525 0.727713 5.13685 0.682263 6.13488C0.636063 7.13448 0.625488 7.45405 0.625488 10C0.625488 12.5459 0.636063 12.8655 0.682263 13.8651C0.727713 14.8632 0.885963 15.5448 1.11771 16.1407C1.35704 16.7571 1.67736 17.2807 2.19906 17.8014C2.72076 18.3221 3.24299 18.6428 3.85979 18.8828C4.45649 19.1145 5.13734 19.2728 6.13536 19.3182C7.13549 19.3637 7.45454 19.375 10.0005 19.375C12.5464 19.375 12.866 19.3644 13.8656 19.3182C14.8637 19.2728 15.5452 19.1145 16.1412 18.8828C16.7576 18.6428 17.2801 18.3224 17.8019 17.8014C18.3237 17.2805 18.6433 16.7571 18.8833 16.1407C19.115 15.5448 19.274 14.8631 19.3187 13.8651C19.3642 12.8648 19.3747 12.5459 19.3747 10C19.3747 7.45405 19.3642 7.13448 19.3187 6.13488C19.2733 5.13678 19.115 4.45487 18.8833 3.8593C18.6433 3.24287 18.3229 2.72035 17.8019 2.19857C17.281 1.6768 16.7576 1.35655 16.1419 1.11722C15.5452 0.885475 14.8636 0.726475 13.8664 0.681775C12.8668 0.636325 12.5472 0.625 10.0012 0.625C7.45529 0.625 7.13549 0.635575 6.13536 0.681775Z"
@@ -780,16 +857,16 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#">Про нас</a></li>
-            <li><a href="#">Портфоліо</a></li>
-            <li><a href="#">Чому саме ми?</a></li>
-            <li><a href="#">Прайс</a></li>
-            <li><a href="#">Процеси</a></li>
-            <li><a href="#">Відгуки</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#portfolio">Портфоліо</a></li>
+            <li><a href="#advantages">Чому саме ми?</a></li>
+            <li><a href="#tarrifs">Прайс</a></li>
+            <li><a href="#processes">Процеси</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <!-- <li><a href="#">Контакти</a></li> -->
           </ul>
         </nav>
-        <button class="btn primary">
+        <button class="btn primary" data-popup="contact">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11.871 5.32596C13.0709 5.52705 14.1608 6.09377 15.031 6.96214C15.9011 7.8305 16.4644 8.91824 16.6705 10.1157M12.0542 1.40002C14.1883 1.76108 16.1347 2.77113 17.6826 4.31133C19.2306 5.85611 20.2381 7.7985 20.5999 9.92828M18.9329 18.4017C18.9329 18.4017 17.7742 19.5397 17.4903 19.8733C17.0277 20.3669 16.4827 20.6 15.7683 20.6C15.6996 20.6 15.6263 20.6 15.5576 20.5954C14.1974 20.5086 12.9335 19.9785 11.9855 19.526C9.39335 18.2737 7.11724 16.4959 5.22582 14.2427C3.66415 12.3643 2.61997 10.6275 1.92844 8.76284C1.50253 7.62482 1.34682 6.73818 1.41551 5.90181C1.46131 5.36708 1.6674 4.92375 2.04751 4.54442L3.60919 2.98593C3.83359 2.77569 4.07174 2.66144 4.3053 2.66144C4.59382 2.66144 4.82739 2.83511 4.97394 2.98136C4.97852 2.98593 4.9831 2.9905 4.98768 2.99507C5.26704 3.25558 5.53266 3.52523 5.81202 3.81316C5.95399 3.95941 6.10054 4.10566 6.24709 4.25648L7.49735 5.50419C7.9828 5.98864 7.9828 6.43654 7.49735 6.92099C7.36454 7.05353 7.23631 7.18607 7.1035 7.31404C6.7188 7.70709 7.021 7.40551 6.62257 7.76199C6.61341 7.77113 6.60425 7.7757 6.59967 7.78485C6.20582 8.17789 6.27909 8.5618 6.36153 8.82231C6.36611 8.83602 6.37069 8.84973 6.37527 8.86345C6.70042 9.64954 7.15839 10.3899 7.85451 11.272L7.85909 11.2766C9.12308 12.8305 10.4558 14.0416 11.9259 14.9694C12.1136 15.0882 12.306 15.1842 12.4892 15.2756C12.654 15.3579 12.8097 15.4356 12.9426 15.5179C12.9609 15.527 12.9792 15.5407 12.9975 15.5499C13.1532 15.6275 13.2998 15.6641 13.4509 15.6641C13.831 15.6641 14.0692 15.4265 14.147 15.3488L15.0447 14.4529C15.2004 14.2975 15.4477 14.1101 15.7362 14.1101C16.0202 14.1101 16.2537 14.2884 16.3957 14.4438C16.4003 14.4483 16.4003 14.4483 16.4049 14.4529L18.9283 16.9712C19.4 17.4373 18.9329 18.4017 18.9329 18.4017Z"
@@ -805,5 +882,45 @@
     </footer>
   </body>
 
+  <div class="popup" data-toggle="contact">
+    <div class="popup__content">
+      <div class="popup__content-header">
+        <p>Зв’язатись з нами</p>
+        <button class="popup__close"></button>
+      </div>
+      <div class="popup__content-body">
+        <form action="#" method="post">
+          <label>
+            <input type="text" name="nomo" placeholder="Ім'я" />
+            <span>Ім'я</span>
+          </label>
+          <label>
+            <input type="tel" name="telefono" placeholder="Ваш номер телефону" reuired />
+            <span>Ваш номер телефону<i>*</i></span>
+          </label>
+          <label>
+            <input type="email" name="posto" placeholder="Ваш e-mail" reuired />
+            <span>Ваш e-mail<i>*</i></span>
+          </label>
+          <label>
+            <textarea rows="5" type="text" name="messago" placeholder="Ваше повідомлення"></textarea>
+            <span>Ваше повідомлення</span>
+          </label>
+
+          <button class="btn primary">
+            Надіслати заявку
+            <span>
+              <svg width="23" height="23">
+                <use xlink:href="assets/img/arrows.svg#right" href="assets/img/arrows.svg#right"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/popup.js"></script>
+  <script type="text/javascript" src="assets/js/animation.js"></script>
 </html>
